@@ -6,6 +6,7 @@
 *.o.*
 *.a
 *.s
+*.exe
 Kbuild
 Config.in
 
