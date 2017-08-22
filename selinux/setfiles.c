@@ -614,7 +614,7 @@ int setfiles_main(int argc UNUSED_PARAM, char **argv)
 	if (applet_name[0] == 'r') { /* restorecon */
 		flags = getopt32(argv, "^"
 			"de:*f:ilnpqrsvo:FWR",
-			"\0" "vv:v--p:p--v:v--q:q--v";
+			"\0" "vv:v--p:p--v:v--q:q--v",
 			&exclude_dir, &input_filename, &out_filename,
 			&verbose
 		);
@@ -622,7 +622,7 @@ int setfiles_main(int argc UNUSED_PARAM, char **argv)
 		flags = getopt32(argv, "^"
 			"de:*f:ilnpqr:svo:FW"
 			IF_FEATURE_SETFILES_CHECK_OPTION("c:"),
-			"\0" "vv:v--p:p--v:v--q:q--v";
+			"\0" "vv:v--p:p--v:v--q:q--v",
 			&exclude_dir, &input_filename, &rootpath, &out_filename,
 			IF_FEATURE_SETFILES_CHECK_OPTION(&policyfile,)
 			&verbose
