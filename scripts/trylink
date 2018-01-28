@@ -152,7 +152,7 @@ while test "$LDLIBS"; do
     all_needed=true
     last_needed=false
     for one in $LDLIBS; do
-	without_one=`echo " $LDLIBS " | sed "s/ $one / /g" | xargs`
+	without_one=`echo " $LDLIBS " | sed "s| $one | |g" | xargs`
 	# "lib1 lib2 lib3" -> "-llib1 -llib2 -llib3"
 	l_list=`echo " $without_one " | sed -e 's: \([^- ][^ ]*\): -l\1:g'`
 	test x"$l_list" != x"" && l_list="$START_GROUP $l_list $END_GROUP"

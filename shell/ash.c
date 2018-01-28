@@ -14072,7 +14072,7 @@ int ash_main(int argc UNUSED_PARAM, char **argv)
 		const char *hp;
 
 		state = 1;
-		read_profile("/etc/profile");
+		read_profile("/system/etc/profile");
  state1:
 		state = 2;
 		hp = lookupvar("HOME");
